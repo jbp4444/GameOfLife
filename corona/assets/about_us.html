@@ -9,9 +9,33 @@ color: white;
 </style>
 </head>
 <body>
-Built with <a href="http://coronalabs.com">Corona SDK</a>
-<form action="corona:backbtn">
-	<input type="submit" value="Back"/>
-</form>
+This is a game/simulator for Conway's Game of Life,
+for an excellent overview of that game, see
+<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Wikipedia's entry</a>
+for it.
+<p>
+Essentially, each cell in the grid can be either "alive" or "dead", and
+a given cell's 8 nearest neighbors determine if it lives or dies.
+Specifically (quoting Wikipedia): 
+<ul>
+<li>Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+<li>Any live cell with two or three live neighbours lives on to the next generation.
+<li>Any live cell with more than three live neighbours dies, as if by overcrowding.
+<li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+</ul>
+<p>
+You can interact with the simulation by simply dragging your finger across
+the screen.  All the cells you touch will become "live" in the next time-step.
+Of course, if you put too many of them together, then they will quickly die out.
+<p>
+There is a "Pause" button on the screen if you want to stop the simulator
+and "hand-code" a group of live cells all at once.
+<p>
+Use the "Settings" screen to change the grid size and cell color, as well
+as speed-up or slow-down the simulation.  There is also a setting to set
+the initial density of "live" cells (you can set to 0 if you want to start
+with a blank screen).  
+<p>
+This app was built with the <a href="http://coronalabs.com">Corona SDK</a>!
 </body>
 </html>
