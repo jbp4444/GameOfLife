@@ -20,18 +20,10 @@ local widget = require( "widget" )
 local scene = storyboard.newScene()
 
 
-local function processButton( event )
-	if( event.target == scene.backBtn ) then
-		storyboard.gotoScene( "scripts.MainScreen" )
-		return true
-	end
-	return false
-end
-
 local function handleUrlEvent( event )	
 	local url = event.url
 	
-	print( "caught url ["..url.."]" )
+	dprint( 10, "caught url ["..url.."]" )
 	if( string.find(url,"corona:backbtn") == 1 ) then
 		storyboard.gotoScene( "scripts.MainScreen" )
 	end
